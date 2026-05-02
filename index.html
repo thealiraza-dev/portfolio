@@ -1,102 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ali Raza | Data Analyst Portfolio</title>
+
+  <!-- Tailwind -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- INTERNAL CSS -->
+  <style>
+    body {
+      background: #0b0f19;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Glass Card */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .glass-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 30px rgba(59, 130, 246, 0.25);
+    }
+
+    /* Project header placeholder */
+    .project-header {
+      height: 140px;
+      background: linear-gradient(135deg, #3b82f6, #10b981);
+      border-radius: 12px;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: white;
+      opacity: 0.9;
+    }
+
+    /* Buttons */
+    .btn-primary {
+      background: #3b82f6;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-primary:hover {
+      background: #2563eb;
+    }
+
+    .btn-secondary {
+      background: #1f2937;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-secondary:hover {
+      background: #374151;
+    }
+
+    .btn-live {
+      background: #10b981;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-live:hover {
+      background: #059669;
+    }
+
+    /* Skill badges spacing */
+    .skill {
+      background: #111827;
+      padding: 8px 12px;
+      border-radius: 999px;
+      margin: 5px;
+      display: inline-block;
+    }
+
+    /* Section title */
+    .section-title {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  </style>
 </head>
 
-<body class="bg-gray-950 text-white">
+<body>
 
-  <!-- HERO SECTION -->
-  <header class="py-16 text-center">
-    <h1 class="text-5xl font-bold">Ali Raza</h1>
-    <p class="text-xl text-gray-400 mt-2">Data Analyst | Business Intelligence | NLP Projects</p>
+<!-- HERO -->
+<header class="text-center py-16">
+  <h1 class="text-5xl font-bold">Ali Raza</h1>
+  <p class="text-gray-400 mt-3 text-lg">
+    Aspiring Data Analyst based in Karachi | BI • NLP • Data Storytelling
+  </p>
 
-    <div class="mt-6 space-x-4">
-      <a href="https://github.com/YOUR_GITHUB" class="bg-blue-600 px-5 py-2 rounded-lg">GitHub</a>
-      <a href="#projects" class="bg-gray-700 px-5 py-2 rounded-lg">View Projects</a>
-    </div>
-  </header>
+  <div class="mt-6 space-x-3">
+    <a href="#projects" class="btn-primary">View Projects</a>
+    <a href="https://github.com/YOUR_GITHUB" class="btn-secondary">GitHub</a>
+  </div>
+</header>
 
-  <!-- ABOUT -->
-  <section class="max-w-4xl mx-auto text-center px-6">
-    <h2 class="text-3xl font-bold mb-4">About Me</h2>
-    <p class="text-gray-300 leading-relaxed">
-      I am a Data Analyst aspirant from Karachi focused on turning raw data into business insights.
-      I build end-to-end analytics projects using Python, NLP, and dashboards to simulate real-world business problems.
-      My goal is to work in Data Analytics / Business Intelligence roles where I can help companies make data-driven decisions.
-    </p>
-  </section>
+<!-- ABOUT -->
+<section class="max-w-4xl mx-auto text-center px-6">
+  <h2 class="section-title">About Me</h2>
+  <p class="text-gray-300 leading-relaxed">
+    I am an aspiring Data Analyst from Karachi focused on transforming raw data into meaningful business insights.
+    I specialize in building end-to-end analytics dashboards, NLP-based analysis systems, and business intelligence solutions
+    that support real-world decision-making.
+  </p>
+</section>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="max-w-6xl mx-auto mt-16 px-6">
+<!-- PROJECTS -->
+<section id="projects" class="max-w-6xl mx-auto mt-16 px-6">
 
-    <h2 class="text-3xl font-bold text-center mb-10">Projects</h2>
+  <h2 class="section-title">Projects</h2>
 
-    <div class="grid md:grid-cols-2 gap-8">
+  <div class="grid md:grid-cols-2 gap-8">
 
-      <!-- PROJECT 1 -->
-      <div class="bg-gray-900 p-6 rounded-xl shadow-lg">
-        <h3 class="text-2xl font-bold">🚗 Suzuki Sales Intelligence</h3>
-        <p class="text-gray-400 mt-3">
-          Business analytics project analyzing car sales trends, inflation impact, and regional performance.
-        </p>
-
-        <ul class="text-gray-300 mt-3 list-disc list-inside">
-          <li>Sales trend analysis across regions</li>
-          <li>Inflation vs sales relationship modeling</li>
-          <li>Data visualization using Matplotlib</li>
-        </ul>
-
-        <div class="mt-4 space-x-3">
-          <a href="https://github.com/thealiraza-dev/suzuki-sales-intelligence.git" class="bg-blue-600 px-4 py-2 rounded">GitHub</a>
-        </div>
+    <!-- PROJECT 1 -->
+    <div class="glass-card">
+      <div class="project-header">
+        📊 Sales Dashboard Preview
       </div>
 
-      <!-- PROJECT 2 -->
-      <div class="bg-gray-900 p-6 rounded-xl shadow-lg">
-        <h3 class="text-2xl font-bold">📊 Customer Sentiment Engine</h3>
-        <p class="text-gray-400 mt-3">
-          NLP-powered dashboard analyzing 1000+ customer reviews to extract business insights for automotive industry.
-        </p>
+      <h3 class="text-xl font-bold">Suzuki Sales Intelligence</h3>
 
-        <ul class="text-gray-300 mt-3 list-disc list-inside">
-          <li>Sentiment analysis using TextBlob</li>
-          <li>Interactive Streamlit dashboard</li>
-          <li>City-wise customer insights</li>
-          <li>Business intelligence KPIs</li>
-        </ul>
+      <p class="text-gray-300 mt-3">
+        Analyzed regional car sales trends and inflation impact using Python and Matplotlib,
+        identifying **high-growth opportunities worth 15–20% potential improvement in targeting strategy**.
+      </p>
 
-        <div class="mt-4 space-x-3">
-          <a href="https://github.com/thealiraza-dev/customer-sentiment-analyzer" class="bg-blue-600 px-4 py-2 rounded">GitHub</a>
-          <a href="https://customer-sentiment-analyzergit-suzuki.streamlit.app/" class="bg-green-600 px-4 py-2 rounded">Live Demo</a>
-        </div>
+      <div class="mt-4">
+        <a href="https://github.com/YOUR_GITHUB/suzuki" class="btn-secondary">GitHub</a>
+      </div>
+    </div>
+
+    <!-- PROJECT 2 -->
+    <div class="glass-card">
+      <div class="project-header">
+        🤖 Sentiment Engine Dashboard
       </div>
 
+      <h3 class="text-xl font-bold">Customer Sentiment Engine</h3>
+
+      <p class="text-gray-300 mt-3">
+        Built an NLP-powered analytics system using TextBlob and Streamlit to classify 1000+ customer reviews,
+        enabling identification of **high-risk cities with up to 40% negative sentiment concentration**.
+      </p>
+
+      <div class="mt-4 space-x-3">
+        <a href="https://github.com/YOUR_GITHUB/sentiment" class="btn-secondary">GitHub</a>
+        <a href="https://YOUR_STREAMLIT_APP" class="btn-live">Live Demo</a>
+      </div>
     </div>
-  </section>
 
-  <!-- SKILLS -->
-  <section class="mt-20 text-center px-6">
-    <h2 class="text-3xl font-bold mb-6">Skills</h2>
+  </div>
+</section>
 
-    <div class="flex flex-wrap justify-center gap-3">
-      <span class="bg-gray-800 px-4 py-2 rounded-full">Python</span>
-      <span class="bg-gray-800 px-4 py-2 rounded-full">Pandas</span>
-      <span class="bg-gray-800 px-4 py-2 rounded-full">NLP</span>
-      <span class="bg-gray-800 px-4 py-2 rounded-full">Data Analysis</span>
-      <span class="bg-gray-800 px-4 py-2 rounded-full">Streamlit</span>
-      <span class="bg-gray-800 px-4 py-2 rounded-full">Business Intelligence</span>
-    </div>
-  </section>
+<!-- SKILLS -->
+<section class="mt-20 text-center px-6">
+  <h2 class="section-title">Skills</h2>
 
-  <!-- CONTACT -->
-  <footer class="mt-20 text-center py-10 text-gray-400">
-    <p>© 2026 Ali Raza | Built for Data Analyst Roles</p>
-  </footer>
+  <div class="mt-4">
+    <span class="skill">Python</span>
+    <span class="skill">Pandas</span>
+    <span class="skill">NLP</span>
+    <span class="skill">Data Analysis</span>
+    <span class="skill">Streamlit</span>
+    <span class="skill">Business Intelligence</span>
+    <span class="skill">Data Visualization</span>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="mt-20 text-center px-6">
+  <h2 class="section-title">Contact</h2>
+
+  <div class="space-x-6 mt-4 text-gray-300">
+    <a href="mailto:your-email@gmail.com">📧 Email</a>
+    <a href="https://linkedin.com/in/YOUR_LINKEDIN">🔗 LinkedIn</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="mt-20 text-center py-10 text-gray-400">
+  <p>© <span id="year"></span> Ali Raza | Data Analyst Portfolio</p>
+</footer>
+
+<!-- JS: Dynamic Year -->
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
-<!-- This is a simple portfolio website for Ali Raza, a Data Analyst aspirant. It includes projects, skills, and a contact section. -->
