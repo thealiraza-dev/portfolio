@@ -1,45 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ali Raza | Data Analyst Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-900">
-  <header class="bg-gray-900 py-8">
-    <div class="container mx-auto">
-      <h1 class="text-4xl font-bold text-white text-center">Ali Raza</h1>
-      <h2 class="text-xl text-white text-center">Software Engineer</h2>
+
+<body class="bg-gray-950 text-white">
+
+  <!-- HERO SECTION -->
+  <header class="py-16 text-center">
+    <h1 class="text-5xl font-bold">Ali Raza</h1>
+    <p class="text-xl text-gray-400 mt-2">Data Analyst | Business Intelligence | NLP Projects</p>
+
+    <div class="mt-6 space-x-4">
+      <a href="https://github.com/YOUR_GITHUB" class="bg-blue-600 px-5 py-2 rounded-lg">GitHub</a>
+      <a href="#projects" class="bg-gray-700 px-5 py-2 rounded-lg">View Projects</a>
     </div>
   </header>
-  <main class="container mx-auto py-8">
-    <section class="bg-gray-900 rounded-lg p-8">
-      <h2 class="text-2xl font-bold text-white text-center">About Me</h2>
-      <p class="text-white mt-4">CS Graduate from Karachi. I build software at 5x speed using AI. Fast learner. No math, just logic.</p>
-    </section>
-    <section class="mt-8">
-      <h2 class="text-2xl font-bold text-white text-center">Projects</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <div class="bg-gray-800 p-4 rounded-lg">
-          <h3 class="text-lg font-bold text-white">Project 1</h3>
-          <p class="text-white mt-2">Description of Project 1.</p>
-        </div>
-        <div class="bg-gray-800 p-4 rounded-lg">
-          <h3 class="text-lg font-bold text-white">Project 2</h3>
-          <p class="text-white mt-2">Description of Project 2.</p>
-        </div>
-        <div class="bg-gray-800 p-4 rounded-lg">
-          <h3 class="text-lg font-bold text-white">Project 3</h3>
-          <p class="text-white mt-2">Description of Project 3.</p>
+
+  <!-- ABOUT -->
+  <section class="max-w-4xl mx-auto text-center px-6">
+    <h2 class="text-3xl font-bold mb-4">About Me</h2>
+    <p class="text-gray-300 leading-relaxed">
+      I am a Data Analyst aspirant from Karachi focused on turning raw data into business insights.
+      I build end-to-end analytics projects using Python, NLP, and dashboards to simulate real-world business problems.
+      My goal is to work in Data Analytics / Business Intelligence roles where I can help companies make data-driven decisions.
+    </p>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="max-w-6xl mx-auto mt-16 px-6">
+
+    <h2 class="text-3xl font-bold text-center mb-10">Projects</h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <!-- PROJECT 1 -->
+      <div class="bg-gray-900 p-6 rounded-xl shadow-lg">
+        <h3 class="text-2xl font-bold">🚗 Suzuki Sales Intelligence</h3>
+        <p class="text-gray-400 mt-3">
+          Business analytics project analyzing car sales trends, inflation impact, and regional performance.
+        </p>
+
+        <ul class="text-gray-300 mt-3 list-disc list-inside">
+          <li>Sales trend analysis across regions</li>
+          <li>Inflation vs sales relationship modeling</li>
+          <li>Data visualization using Matplotlib</li>
+        </ul>
+
+        <div class="mt-4 space-x-3">
+          <a href="https://github.com/YOUR_GITHUB/suzuki-project" class="bg-blue-600 px-4 py-2 rounded">GitHub</a>
         </div>
       </div>
-    </section>
-  </main>
-  <footer class="bg-gray-900 py-4">
-    <div class="container mx-auto text-center text-white">
-      &copy; 2022 My Portfolio. All rights reserved.
+
+      <!-- PROJECT 2 -->
+      <div class="bg-gray-900 p-6 rounded-xl shadow-lg">
+        <h3 class="text-2xl font-bold">📊 Customer Sentiment Engine</h3>
+        <p class="text-gray-400 mt-3">
+          NLP-powered dashboard analyzing 1000+ customer reviews to extract business insights for automotive industry.
+        </p>
+
+        <ul class="text-gray-300 mt-3 list-disc list-inside">
+          <li>Sentiment analysis using TextBlob</li>
+          <li>Interactive Streamlit dashboard</li>
+          <li>City-wise customer insights</li>
+          <li>Business intelligence KPIs</li>
+        </ul>
+
+        <div class="mt-4 space-x-3">
+          <a href="https://github.com/thealiraza-dev/customer-sentiment-analyzer" class="bg-blue-600 px-4 py-2 rounded">GitHub</a>
+          <a href="https://customer-sentiment-analyzergit-suzuki.streamlit.app/" class="bg-green-600 px-4 py-2 rounded">Live Demo</a>
+        </div>
+      </div>
+
     </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="mt-20 text-center px-6">
+    <h2 class="text-3xl font-bold mb-6">Skills</h2>
+
+    <div class="flex flex-wrap justify-center gap-3">
+      <span class="bg-gray-800 px-4 py-2 rounded-full">Python</span>
+      <span class="bg-gray-800 px-4 py-2 rounded-full">Pandas</span>
+      <span class="bg-gray-800 px-4 py-2 rounded-full">NLP</span>
+      <span class="bg-gray-800 px-4 py-2 rounded-full">Data Analysis</span>
+      <span class="bg-gray-800 px-4 py-2 rounded-full">Streamlit</span>
+      <span class="bg-gray-800 px-4 py-2 rounded-full">Business Intelligence</span>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <footer class="mt-20 text-center py-10 text-gray-400">
+    <p>© 2026 Ali Raza | Built for Data Analyst Roles</p>
   </footer>
+
 </body>
 </html>
